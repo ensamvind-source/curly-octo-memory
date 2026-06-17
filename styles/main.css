@@ -1,0 +1,236 @@
+﻿@font-face {
+    font-family: 'Orbitron';
+    src: url('../fonts/Orbitron-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #050b1f;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid #2a3650;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    color: #00f5ff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.header__nav a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.header__nav a:hover { color: #fff; }
+
+.btn {
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.btn--primary {
+    background-color: #00f5ff;
+    color: #000;
+}
+.btn--primary:hover {
+    background-color: #fff;
+    transform: translateY(-2px);
+}
+.btn--outline {
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+}
+.btn--outline:hover {
+    border-color: #00f5ff;
+    color: #00f5ff;
+}
+
+.section { padding: 60px 0; }
+
+.section__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.section__title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-right: 20px;
+}
+.section__divider {
+    flex-grow: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00f5ff, transparent);
+    position: relative;
+}
+.section__divider::before {
+    content: '\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8\25c8';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    color: #00f5ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.tournament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.tournament-card {
+    background: #0d162a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2a3650;
+    transition: transform 0.3s, border-color 0.3s;
+}
+.tournament-card:hover {
+    transform: translateY(-5px);
+    border-color: #00f5ff;
+}
+.tournament-card__top {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+.tournament-card__title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.tournament-card__desc {
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.tournament-card__stats {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #2a3650;
+    padding-top: 15px;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.stream-card {
+    display: flex;
+    background: #0d162a;
+    border-radius: 12px;
+    border: 1px solid #2a3650;
+    overflow: hidden;
+}
+.stream-card__preview {
+    width: 320px;
+    height: 180px;
+    background: #1a2540;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stream-card__play-btn {
+    width: 56px;
+    height: 56px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    color: #00f5ff;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.stream-card__play-btn:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+.stream-card__info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.stream-card__top-meta {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+.stream-card__title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.stream-card__desc {
+    color: #aaa;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+.stream-card__link {
+    text-align: center;
+    text-decoration: none;
+    color: #00f5ff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.stream-card__link:hover {
+    color: #fff;
+}
+
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #2a3650;
+    text-align: center;
+    color: #666;
+}

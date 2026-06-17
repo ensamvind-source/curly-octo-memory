@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProArena - Киберспортивная платформа</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="#" class="header__logo">PROARENA</a>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#tournaments">Турниры</a></li>
+                    <li><a href="#streams">Стримы</a></li>
+                    <li><a href="#about">О нас</a></li>
+                </ul>
+            </nav>
+            <div class="header__auth">
+                <button class="btn btn--outline">Войти</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section id="tournaments" class="section">
+                <div class="section__header">
+                    <h2 class="section__title">Ближайшие турниры</h2>
+                    <div class="section__divider"></div>
+                </div>
+
+                <div class="tournament-grid">
+                    <!-- Карточка 1 -->
+                    <article class="tournament-card">
+                        <div class="tournament-card__top">
+                            <span class="tournament-card__type">Main Event</span>
+                            <span class="tournament-card__date">25.10.2024</span>
+                        </div>
+                        <h3 class="tournament-card__title">ProArena Cup 2024</h3>
+                        <p class="tournament-card__desc">Призовой фонд: \$50,000</p>
+                        <div class="tournament-card__stats">
+                            <span>128 участников</span>
+                            <span>CS2 / Dota 2</span>
+                        </div>
+                        <button class="btn btn--primary">Участвовать</button>
+                    </article>
+
+                    <!-- Карточка 2 -->
+                    <article class="tournament-card">
+                        <div class="tournament-card__top">
+                            <span class="tournament-card__type">Qualifier</span>
+                            <span class="tournament-card__date">01.11.2024</span>
+                        </div>
+                        <h3 class="tournament-card__title">Local League Qualifier</h3>
+                        <p class="tournament-card__desc">Отборочный этап для региональных команд</p>
+                        <div class="tournament-card__stats">
+                            <span>32 команды</span>
+                            <span>CS2</span>
+                        </div>
+                        <button class="btn btn--primary">Подробнее</button>
+                    </article>
+                </div>
+            </section>
+
+            <section id="streams" class="section">
+                <div class="section__header">
+                    <h2 class="section__title">Сейчас в эфире</h2>
+                    <div class="section__divider"></div>
+                </div>
+
+                <div class="stream-card">
+                    <div class="stream-card__preview">
+                        <div class="stream-card__play-btn">?</div>
+                    </div>
+                    <div class="stream-card__info">
+                        <div class="stream-card__top-meta">
+                            <span class="stream-card__category">Counter-Strike 2</span>
+                            <span class="stream-card__viewer-count">1.2K зрителей</span>
+                        </div>
+                        <h3 class="stream-card__title">Xx_Shadow_xX играет в CS2</h3>
+                        <p class="stream-card__desc">Разбираем новые тактики на Mirage. Залетай в чат!</p>
+                        <a href="#" class="btn btn--outline stream-card__link">Смотреть стрим ></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ProArena. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
